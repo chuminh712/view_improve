@@ -1,0 +1,14 @@
+<ul>
+  <li>
+    Name: <%= evaluation.name %>
+  </li>
+  <li>
+    Exams:
+      <ul>
+        <% evaluation.exams.each do |exam| %>
+          <li><%= exam.name %></li>
+          <%= live_exam_count_html(evaluation, exam) %>
+        <% end %>
+      </ul>
+  </li>
+</ul>

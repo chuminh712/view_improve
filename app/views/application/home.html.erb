@@ -1,0 +1,5 @@
+<ul>
+  <% @evaluation.each do |evaluation| %>
+    <li id="<%= evaluation.id %>"><%= render evaluation %></li>
+  <% end %>
+</ul>

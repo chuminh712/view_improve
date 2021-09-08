@@ -1,0 +1,17 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<%= form_for @user, url: {controller: :user, action: :new}, method: :get do %>
+    <%= label_tag(:name, "Name:") %>
+    <%= text_field_tag(:name)%>
+    <%= label_tag(:phone, "Phone:") %>
+    <%= text_field_tag(:phone) %>
+    <%= @params %>
+    <button name="button" type="submit" id="save-button">Save</button>
+  <% end %>
+
+  <script>
+    $("#name").change(function(){
+        name = $("#name").val();
+        alert(name);
+        $("#save-button").prop(id) = name
+    });
+  </script>
